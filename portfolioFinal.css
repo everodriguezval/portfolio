@@ -1,0 +1,572 @@
+/* -------------------------- Global style --------------------------------------------- */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+* {
+    --light-blue: rgb(186, 231, 234);
+    --skyish: rgb(91, 215, 219);
+    --seaish: rgb(5, 226, 246);
+    --oranges: rgb(206, 123, 68);
+    --damasco: rgb(214, 100, 12);
+}
+
+body {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: #eedefa;
+}
+
+
+.btn {
+    color: rgb(188, 249, 221);
+    font-size: 1.9rem;
+    font-style: oblique;
+}
+
+.wrap-container {
+    max-width: 900px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.item-details h3+p {
+    font-style: italic;
+}
+
+.item-details h3~p {
+    margin: 0;
+}
+
+.divider>section {
+    border-bottom: 1px solid rgb(207, 205, 214);
+    padding: 40px 0;
+}
+
+.divider>section:last-of-type {
+    border: none;
+}
+
+/* -------------------------- Profile --------------------------------------------- */
+header {
+    background-image: url(./images/globe.jpg);
+    background-size: cover;
+    background-position: 50% 95%;
+    color: rgb(226, 243, 245);
+}
+
+h1,
+h2 {
+    font-family: 'Roboto Slab', serif;
+    margin: 0%;
+    letter-spacing: 0.2rem;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-top: 55vh;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 2%;
+}
+
+
+.nav-links {
+    margin: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    position: fixed;
+    padding: 0%;
+    z-index: 2;
+}
+
+.nav-links li {
+    list-style: none;
+    padding: 0%;
+}
+
+.nav-links a {
+    color: rgb(251, 242, 249);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #6EFF33;
+
+}
+
+#auto-typing {
+    color: #6EFF33;
+}
+
+/* -------------------------- About me --------------------------------------------- */
+.about-me {
+    text-align: center;
+}
+
+/* -------------------------- Education --------------------------------------------- */
+
+.about-me,
+.education {
+    color: rgb(250, 241, 248);
+    background-color: rgba(0, 1, 7, 0.964);
+}
+
+.education p {
+    width: 75%;
+}
+
+.name-course {
+    color: #b85cfa;
+}
+
+/* -------------------------- IT skills --------------------------------------------- */
+.skills {
+    background-color: rgba(0, 1, 7, 0.964);
+    color: rgb(250, 241, 248);
+}
+
+.skills img {
+    height: 20%;
+    width: 20%;
+}
+
+#coding-skills {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+#mongodb {
+    margin: 0 5%;
+    height: 25%;
+    width: 30%;
+    filter: brightness(250%);
+}
+
+#coding-skills>img:hover {
+    opacity: 1;
+    -webkit-animation: flash 1s;
+    animation: flash 1s;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#coding-skills>img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+#coding-skills>img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* -------------------------- Projects --------------------------------------------- */
+img {
+    width: 35%;
+    height: 35%;
+    position: relative;
+    border-radius: 20px;
+    margin-left: 1%;
+}
+
+.project-item img:hover {
+    box-shadow: 0px 0px 5px 5px #e9fa03;
+}
+
+.projects {
+    background-color: rgba(0, 1, 7, 0.964);
+    color: rgb(250, 241, 248);
+}
+
+.project-item {
+    overflow: hidden;
+}
+
+.project-item h3 {
+    margin-top: 0%;
+    position: relative;
+}
+
+/* -------------------------- Work Experience --------------------------------------------- */
+.work-experience {
+    background-color: rgba(0, 1, 7, 0.964);
+    color: rgb(250, 241, 248);
+}
+
+.work-experience h3,
+.work-experience h4 {
+    text-align: center;
+    position: relative;
+}
+
+.item-details {
+    padding: 40px 0;
+}
+
+.place-work {
+    margin-bottom: 0%;
+}
+
+.date,
+.work-experience h3 {
+    margin-top: 0%;
+}
+
+.work-experience h4 {
+    margin-top: 1.2%;
+}
+
+.work-experience p {
+    position: relative;
+    font-size: 1.4rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgb(34, 195, 180);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    margin: 0;
+    padding: 0px 20px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.right {
+    left: 50%;
+    padding-right: 0px;
+}
+
+.left {
+    left: 0.2%;
+    padding-left: 0px;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 10px;
+    border: medium solid rgb(250, 241, 248);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgb(250, 241, 248);
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 10px;
+    border: medium solid rgb(250, 241, 248);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(250, 241, 248) transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 15px 15px;
+    position: relative;
+    border-radius: 10px;
+    color: rgb(247, 239, 239);
+    line-height: 1.1;
+    border: 2px solid white;
+}
+
+.content::before {
+    content: "";
+    background-image: url(./images/stars2.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.35;
+    border-radius: 10px;
+}
+
+.description-job {
+    font-size: 1.2rem;
+}
+
+#linkedin-link {
+    text-align: center;
+    padding-bottom: 2%;
+    margin-bottom: 0%;
+}
+
+/* -------------------------- Hobbies --------------------------------------------- */
+.hobbies {
+    background-color: rgba(0, 1, 7, 0.964);
+    color: rgb(250, 241, 248);
+}
+
+/* -------------------------- Footer --------------------------------------------- */
+input,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 1.2rem;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+footer {
+    background-image: url(./images/globeFooter.jpg);
+    background-size: cover;
+    background-position: 50% 10%;
+    color: rgb(250, 241, 248);
+}
+
+label {
+    font-size: 1.3rem;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-list a {
+    margin: 0px 30px;
+    color: rgb(250, 241, 248);
+}
+
+#form-container {
+    width: 33%;
+    background-color: rgb(62, 25, 73);
+    border-radius: 5px;
+    padding: 2px 10px;
+    margin: 80px auto;
+    box-shadow: 0px 0px 30px 5px #6EFF33;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+input[type=submit] {
+    background-color: #4b6270;
+    color: azure;
+    margin-bottom: 2%;
+}
+
+input[type=submit]:hover {
+    background-color: #87f45c;
+    color: black;
+}
+
+/* -------------------------- Responsive --------------------------------------------- */
+
+
+@media screen and (max-width: 749px) {
+    h1 {
+        margin-bottom: 20px;
+        font-size: 2.1em;
+        margin-top: 20%;
+    }
+
+    h1,
+    h2 {
+        line-height: 1;
+
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 1.5em;
+    }
+
+    .skills img {
+        height: 35%;
+        width: 35%;
+
+    }
+
+    .wrap-container {
+        padding: 25px 0;
+    }
+
+    .contact-list a {
+        padding: 5px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 0.8em;
+        margin: 10px 0;
+    }
+
+    .project-item img {
+        height: 70%;
+        width: 70%;
+    }
+
+    #form-container {
+        width: 80%;
+    }
+
+    #auto-typing {
+        font-size: 0.65em;
+    }
+
+    #coding-skills {
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .timeline::after {
+        left: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 45px;
+        padding-right: 10px;
+        margin-bottom: 2%;
+    }
+
+    .container::before {
+        left: 35px;
+        border: medium solid rgb(250, 241, 248);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgb(250, 241, 248) transparent transparent;
+    }
+
+    .right {
+        left: 0%;
+    }
+}
+
+@media screen and (min-width: 750px) {
+
+    header,
+    h2 {
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 25vh;
+    }
+
+    .project-item img {
+        float: left;
+        margin-right: 20px;
+    }
+
+    .job-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+    }
+}
+
+
+@media screen and (min-width: 950px) {
+    h1 {
+        margin-top: 60vh;
+    }
+    
+    .wrap-container {
+        width: 65%;
+    }
+    
+    body {
+    font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    h1 {
+        margin-top: 65vh;
+    }
+      
+    body {
+    font-size: 1.4em;
+    }
+}
