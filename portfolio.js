@@ -10,6 +10,46 @@ let typed = new Typed("#auto-typing", {
   loop: true,
 });
 
+let envelopeOpening = document.querySelector(".fa-envelope");
+envelopeOpening.addEventListener("mouseover", mouseOver);
+envelopeOpening.addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  envelopeOpening.classList.replace("fa-envelope", "fa-envelope-open");
+}
+
+function mouseOut() {
+  envelopeOpening.classList.replace("fa-envelope-open", "fa-envelope");
+}
+
+(function() { 
+  emailjs.init('Sg7c9enWkQ3L6b3M3');
+})();
+
+
+let form = document.getElementById('form')
+form.addEventListener("submit", submitForm);
+
+function submitForm(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_2lzb8ru","template_035yoau", this)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Your mail is sent!');
+            clearFormFields();
+        }, function(error) {
+            console.log('FAILED...', error);
+        });
+};
+
+function clearFormFields() {
+  document.getElementById("email").value = ""; 
+  document.getElementById("message").value = "";  
+  document.getElementById("name").value = "";    
+}
+
+// autotyping function
 // var i = 0;
 // var txt =
 //   "At this role...";
@@ -23,17 +63,3 @@ let typed = new Typed("#auto-typing", {
 //   }
 // }
 // typeWriter();
-
-
-let envelopeOpening = document.querySelector(".fa-envelope");
-envelopeOpening.addEventListener("mouseover", mouseOver);
-envelopeOpening.addEventListener("mouseout", mouseOut);
-
-function mouseOver() {
-  envelopeOpening.classList.replace("fa-envelope", "fa-envelope-open");
-}
-
-function mouseOut() {
-  envelopeOpening.classList.replace("fa-envelope-open", "fa-envelope");
-}
-

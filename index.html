@@ -90,9 +90,7 @@
               <img src="./images/python.png" alt="python_logo">
               <img src="./images/mySQL.png" alt="mySQL_logo">
               <img id="quantexa" src="./images/Quantexa.png" alt="Quantexa_logo">
-              <img id="react" src="./images/React.png" alt="React_logo">
-
-              
+              <img id="react" src="./images/React.png" alt="React_logo">           
           </section>
         </div>
       </section>
@@ -224,12 +222,12 @@
           <div id="form-container">
              
             <!--<form action="mailto:eve.rodriguezval@gmail.com" method="POST" enctype="text/plain" target="blank" id="form"> -->
-            <form action="https://formspree.io/f/xoqbyeaq" method="POST" id="form">
-              <label for="name" id="name" name="name">Name</label>
-              <input type="text" name="name" id="name" required>
-              <label for="email" id="email" name="email">Email</label>
-              <input type="email" name="email" id="email" required>
-              <label for="message" name="message" id="message">Message</label>
+            <form id="form">
+              <label for="name" name="name">Name</label>
+              <input type="text" name="user_name" id="name" required>
+              <label for="email" name="email">Email</label>
+              <input type="email" name="user_email" id="email" required>
+              <label for="message" name="message">Message</label>
               <textarea id="message" name="message" placeholder="Your message..."></textarea>
               <input type="submit" value="Submit">
             </form>
@@ -245,6 +243,6 @@
       </footer> 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </body>
 </html>
